@@ -1,9 +1,8 @@
 import Link from "next/link";
-import type { LucideIcon } from "lucide-react";
-import { Facebook, Instagram, Linkedin, Youtube, Twitter, Music2 } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, Twitter, Music2, type LucideIcon } from "lucide-react";
 import { SOCIALS, CLINIC } from "@/lib/content";
 
-const SOCIAL_ICONS: Record<string, ComponentType<{ size?: number; className?: string }>> = {
+const SOCIAL_ICONS: Record<string, LucideIcon> = {
   Facebook: Facebook,
   Instagram: Instagram,
   LinkedIn: Linkedin,
