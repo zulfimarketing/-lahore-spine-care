@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background: #0a0906;
+  color: #f5f2ea;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+::selection {
+  background: rgba(201, 154, 74, 0.35);
+  color: #f5f2ea;
+}
+
+/* Custom cursor - hidden on touch devices */
+
+
+.section {
+  padding-top: clamp(64px, 10vw, 140px);
+  padding-bottom: clamp(64px, 10vw, 140px);
+}
+
+.container-narrow {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: clamp(20px, 5vw, 64px);
+  padding-right: clamp(20px, 5vw, 64px);
+}
+
+.eyebrow-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #a8a296;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+.eyebrow-line::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, #c99a4a, transparent);
+}
+
+.gold-underline {
+  position: relative;
+}
+.gold-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, #c99a4a, transparent);
+  transform-origin: left;
+}
+
+/* focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #f0c674;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
