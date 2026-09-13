@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { ComponentType } from "react";
+import type { LucideIcon } from "lucide-react";
 import { Facebook, Instagram, Linkedin, Youtube, Twitter, Music2 } from "lucide-react";
 import { SOCIALS, CLINIC } from "@/lib/content";
 
